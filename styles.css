@@ -1,0 +1,255 @@
+/* ===== Cores ===== */
+:root {
+--bordo: #7b1e3a;
+--bordo-escuro: #5a1229;
+--bordo-claro: #b0475f;
+--creme: #fbf3ee;
+--dourado: #c9a15a;
+--oliva: #556b2f;
+--texto: #3a2a2e;
+}
+/* ===== Base ===== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: Arial, sans-serif;
+background: var(--creme);
+color: var(--texto);
+line-height: 1.6;
+}
+/* ===== Cabeçalho ===== */
+header {
+background: linear-gradient(135deg, var(--bordo), var(--bordo-claro));
+color: white;
+text-align: center;
+padding: 40px 20px;
+}
+header h1 {
+font-size: 3rem;
+}
+.subtitulo {
+color: var(--dourado);
+text-transform: uppercase;
+letter-spacing: 4px;
+}
+.slogan {
+font-style: italic;
+}
+/* ===== Menu lateral ===== */
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 220px;
+height: 100vh;
+padding: 24px 16px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+background: white;
+box-shadow: 2px 0 8px #0002;
+z-index: 1000;
+}
+nav a {
+padding: 10px;
+color: var(--texto);
+text-decoration: none;
+border-radius: 5px;
+}
+nav a:hover {
+color: var(--bordo);
+background: var(--creme);
+}
+/* ===== Conteúdo ===== */
+body:not(.pagina-obrigado) main {
+width: calc(100% - 280px);
+margin: 40px 20px 40px 260px;
+}
+.titulo-secao {
+color: var(--bordo);
+
+text-align: center;
+margin-bottom: 30px;
+}
+.titulo-secao::after {
+content: "";
+display: block;
+width: 70px;
+height: 4px;
+margin: 10px auto;
+background: var(--dourado);
+}
+/* ===== Sobre ===== */
+.sobre-texto {
+max-width: 800px;
+margin: 0 auto 30px;
+text-align: center;
+}
+.sobre-colunas {
+display: flex;
+gap: 24px;
+}
+.sobre-item {
+flex: 1;
+padding: 22px;
+text-align: center;
+background: white;
+border-radius: 12px;
+border-top: 4px solid var(--dourado);
+}
+/* ===== Destaque ===== */
+.destaque {
+display: flex;
+background: white;
+border-radius: 14px;
+overflow: hidden;
+}
+.destaque img {
+width: 45%;
+object-fit: cover;
+}
+.destaque-texto {
+flex: 1;
+padding: 24px;
+}
+.destaque-texto h2,
+.card-corpo h3 {
+color: var(--bordo-escuro);
+}
+.preco-grande,
+.preco {
+color: var(--oliva);
+font-weight: bold;
+}
+/* ===== Cardápio ===== */
+.grade {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 24px;
+}
+.card {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 3px 10px #0002;
+}
+.foto {
+height: 190px;
+}
+.foto img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card-corpo {
+padding: 20px;
+}
+.selo-chef {
+background: var(--dourado);
+color: var(--texto);
+padding: 4px 12px;
+border-radius: 20px;
+}
+/* ===== Formulário ===== */
+.pedido {
+padding: 24px;
+background: white;
+border-radius: 14px;
+}
+.formulario {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px 24px;
+}
+.campo {
+display: flex;
+flex-direction: column;
+}
+.campo-largo {
+grid-column: 1 / -1;
+}
+.campo input,
+.campo select,
+.campo textarea {
+width: 100%;
+padding: 11px;
+border: 1px solid #d9c3c0;
+border-radius: 8px;
+font: inherit;
+}
+.opcoes {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.formulario button,
+.voltar-topo {
+padding: 12px;
+color: white;
+background: var(--bordo);
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+.formulario button:hover,
+.voltar-topo:hover {
+background: var(--bordo-escuro);
+}
+.voltar-topo {
+display: block;
+width: 200px;
+margin: 30px auto;
+text-align: center;
+text-decoration: none;
+}
+/* ===== Página de agradecimento ===== */
+body.pagina-obrigado {
+min-height: 100vh;
+}
+body.pagina-obrigado nav {
+display: none;
+}
+body.pagina-obrigado header {
+height: 220px;
+padding: 45px 20px;
+}
+body.pagina-obrigado main {
+
+width: 600px;
+max-width: calc(100% - 30px);
+margin: 30px auto 40px;
+}
+.obrigado {
+padding: 30px 25px;
+text-align: center;
+background: white;
+border-radius: 16px;
+box-shadow: 0 8px 25px #0002;
+}
+.check {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 60px;
+height: 60px;
+margin: 0 auto 18px;
+border-radius: 50%;
+background: var(--oliva);
+color: white;
+font-size: 34px;
+}
+.obrigado h2 {
+margin-bottom: 12px;
+color: var(--bordo);
+}
+.obrigado-texto {
+max-width: 450px;
+margin: auto;
+}
